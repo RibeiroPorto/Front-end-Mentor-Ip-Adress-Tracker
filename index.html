@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+  <link rel="stylesheet" href="./src/reset.css">
+  <link rel="stylesheet" href="./src/style.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+  <title>Frontend Mentor | IP Address Tracker</title>
+
+
+</head>
+
+<body>
+  <main class="page-content">
+    <div class="interaction-container">
+      <h1>IP Address Tracker</h1>
+      <div class="searching-container">
+        <input type="text" name="" placeholder="Search for any IP address or domain" id="ip_or_domain" class="ip_or_domain_input ">
+        <input type="submit" id="submit-button"class="submit-button" value=">">
+      </div>
+      <div class="search-results">
+        <div class="ip_adress">
+          <p>IP Address</p>
+          <div class="result" id="ip-result">
+            <p>192.212.174.101 </p>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="location">
+          <p>Location</p>
+          <div class="result" id="location-result">
+            <p>Broklyn,NY 10001</p>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="timezone">
+          <p>Timezone</p>
+          <div class="result" id="timezone-result">
+            <p>UTC-05:00</p>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="isp">
+          <p>ISP</p>
+          <div class="result" id="isp-result">
+            <p>SpaceX Starlink</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div id="map" class="map-container">
+
+    </div>
+  </main>
+
+
+
+
+
+  <!--   
+    UTC  -->
+
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script type="text/javascript" src="./src/app.js"></script>
+</body>
+
+</html>
