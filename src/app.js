@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    const apiEndpoint = "https://ip-api.com/json"
+    const apiEndpoint = "http://ip-api.com/json"
     const ipInput = document.querySelector("#ip_or_domain")
     const ipResult = document.querySelector('#ip-result')
     const locationResult = document.querySelector('#location-result')
