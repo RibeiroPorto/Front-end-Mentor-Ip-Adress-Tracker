@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    const apiEndpoint = "http://ip-api.com/json"
+    const apiEndpoint = "https://ip-api.com/json"
     const ipInput = document.querySelector("#ip_or_domain")
     const ipResult = document.querySelector('#ip-result')
     const locationResult = document.querySelector('#location-result')
@@ -102,7 +102,7 @@ function setMarker(map, data) {
     const lon = data.lon
     var marker = L.marker([lat, lon]).addTo(map);
     marker.bindPopup(`<b>Lat: </b>${lat}<br><b>Lat: </b>${lon}`).openPopup();
-    marker._icon.src = '/../images/icon-location.svg'
+    marker._icon.src = './images/icon-location.svg'
     marker._icon.style.width = '30px'
     return marker
 }
