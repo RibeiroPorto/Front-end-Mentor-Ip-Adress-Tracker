@@ -6,9 +6,6 @@
     --default-color: hsl(0, 00%, 100%);
 }
 
-
-
-
 body {
     height: 100vh;
     font-family: 'Rubik', sans-serif;
@@ -19,7 +16,7 @@ body {
 .page-content {
     width: 100%;
     height: 100%;
-    background-color: yellow;
+
 }
 
 .page-content .interaction-container {
@@ -65,10 +62,11 @@ body {
 
 }
 
-.interaction-container div .ip_or_domain_input.invalid_entry{
+.interaction-container div .ip_or_domain_input.invalid_entry {
     border: 2px red solid;
 }
-.interaction-container div .ip_or_domain_input.invalid_entry::placeholder{
+
+.interaction-container div .ip_or_domain_input.invalid_entry::placeholder {
     color: red;
 }
 
@@ -138,6 +136,7 @@ body {
     height: 73%;
     z-index: 1;
 }
-.leaflet-pane.leaflet-marker-pane{
+
+.leaflet-pane.leaflet-marker-pane {
     width: 5em;
 }

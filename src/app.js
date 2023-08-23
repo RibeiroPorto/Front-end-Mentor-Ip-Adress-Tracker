@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const timeZoneResult = document.querySelector('#timezone-result')
     const ispResult = document.querySelector('#isp-result')
 
-    map = setMap(),
-        marker = setMarker(map, { lat: 51.505, lon: -0.09 })
+    map = setMap()
+    marker = setMarker(map, { lat: 51.505, lon: -0.09 })
 
     console.log(map)
     console.log(marker)
@@ -20,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             displayMap(ipData, map)
             if (marker) { marker.remove() }
             marker = setMarker(map, ipData)
-            console.log(ipData)
-            console.log(map)
-            console.log(marker)
+            
         }
 
     })
@@ -75,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }, 2000)
                 break;
             case 'success':
-                // console.log(data);
+                
                 return true
                 break
         }
@@ -84,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 async function getData(endPoint, ip) {
-    console.log(endPoint)
+    console.log(endPoint + "/" + ip + "?fields=63172607")
     const response = await fetch(endPoint + "/" + ip + "?fields=63172607")
     const jsonData = await response.json()
     return jsonData
@@ -104,7 +102,7 @@ function setMarker(map, data) {
     const lon = data.lon
     var marker = L.marker([lat, lon]).addTo(map);
     marker.bindPopup(`<b>Lat: </b>${lat}<br><b>Lat: </b>${lon}`).openPopup();
-    marker._icon.src = '../images/icon-location.svg'
+    marker._icon.src = '/../images/icon-location.svg'
     marker._icon.style.width = '30px'
     return marker
 }
