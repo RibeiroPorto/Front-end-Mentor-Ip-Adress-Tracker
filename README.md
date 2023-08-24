@@ -44,7 +44,7 @@ Users should be able to:
 
 ### What I learned
 
-Through the development of this project i practiced especially api integration, but also reaponsive design, and basic concepts of JS like: promises, html elements manipulation and etc.
+Through the development of this project i practiced especially api integration, but also responsive design, and basic concepts of JS like: promises, html elements manipulation and etc.
 
 
 
