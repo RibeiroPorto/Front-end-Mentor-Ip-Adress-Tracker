@@ -1,7 +1,6 @@
 import API_KEY from './config.js'
 document.addEventListener('DOMContentLoaded', () => {
-    console.log(API_KEY)
-    const apiEndpoint = "https://api.ipgeolocation.io/ipgeo?apiKey="
+     const apiEndpoint = "https://api.ipgeolocation.io/ipgeo?apiKey="
     const ipInput = document.querySelector("#ip_or_domain")
     const ipResult = document.querySelector('#ip-result')
     const locationResult = document.querySelector('#location-result')
@@ -9,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const ispResult = document.querySelector('#isp-result')
 
     var map = setMap()
-    var marker = setMarker(map, { latitude: 51.505, longitude: -0.09 })
+    var marker = setMarker(map, { latitude: 34.05430, longitude: -118.08212 })
 
     document.querySelector('#submit-button').addEventListener('click', async () => {
         var ipData = await getData(apiEndpoint, API_KEY, ipInput.value)
@@ -84,7 +83,7 @@ async function getData(endPoint,API_KEY, ip) {
 }
 
 function setMap() {
-    var map = L.map('map').setView([51.505, -0.09], 13);
+    var map = L.map('map').setView([34.05430, -118.08212], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '© OpenStreetMap'
